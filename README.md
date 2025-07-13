@@ -54,14 +54,15 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [https://github.com/ROKUROO7/Newsletter-sign-up-with-success-message](https://github.com/ROKUROO7/Newsletter-sign-up-with-success-message)
+- Live Site URL: [https://rokuroo7.github.io/Newsletter-sign-up-with-success-message/](https://rokuroo7.github.io/Newsletter-sign-up-with-success-message/)
 
 ## My process
 
 ### Built with
 
 - Semantic HTML5 markup
+- BEM
 - SASS (scss)
 - CSS custom properties
 - Flexbox
