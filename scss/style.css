@@ -28,8 +28,8 @@
   display: grid;
   place-content: center;
 }
-.main-container--blue8 {
-  background-color: hsl(234, 29%, 20%);
+.main-container--blue7 {
+  background-color: hsl(235, 18%, 26%);
 }
 
 .sign-up {
@@ -65,6 +65,9 @@
   font-variation-settings: "wdth" 100;
   font-size: 2.5rem;
 }
+.sign-up_heading--blue8 {
+  color: hsl(234, 29%, 20%);
+}
 .sign-up_description {
   font-family: "Roboto", sans-serif;
   font-optical-sizing: auto;
@@ -74,6 +77,9 @@
   font-size: 16px;
   line-height: 1.5;
 }
+.sign-up_description--Blue7 {
+  color: hsl(235, 18%, 26%);
+}
 .sign-up_list {
   font-family: "Roboto", sans-serif;
   font-optical-sizing: auto;
@@ -81,6 +87,9 @@
   font-style: normal;
   font-variation-settings: "wdth" 100;
   list-style: none;
+}
+.sign-up_list--blue7 {
+  color: hsl(235, 18%, 26%);
 }
 .sign-up_list li {
   background-image: url(../assets/images/icon-list.svg);
@@ -100,6 +109,9 @@
   font-size: 0.75rem;
   padding-block-end: 0.6rem;
 }
+.sign-up_label--blue8 {
+  color: hsl(234, 29%, 20%);
+}
 .sign-up_email-error {
   color: hsl(4, 100%, 67%);
 }
@@ -116,9 +128,9 @@
   text-indent: 1.5rem;
   box-shadow: none;
   border-radius: 0.6rem;
-  border-color: hsl(0, 0%, 58%);
+  border: thin solid hsl(0, 0%, 58%);
 }
-.sign-up_input-email:focus {
+.sign-up_input-email--active:focus {
   outline: none;
 }
 .sign-up_input-email--active:hover {
@@ -145,8 +157,8 @@
   box-shadow: none;
   border-radius: 0.6rem;
 }
-.sign-up_btn--blue7 {
-  background-color: hsl(235, 18%, 26%);
+.sign-up_btn--blue8 {
+  background-color: hsl(234, 29%, 20%);
   color: hsl(0, 0%, 100%);
 }
 .sign-up_btn--active:hover {
@@ -182,6 +194,9 @@
   font-size: 2.5rem;
   line-height: 1;
 }
+.custom-alert_heading--blue8 {
+  color: hsl(234, 29%, 20%);
+}
 .custom-alert_description {
   font-family: "Roboto", sans-serif;
   font-optical-sizing: auto;
@@ -190,6 +205,9 @@
   font-variation-settings: "wdth" 100;
   font-size: 16px;
   line-height: 1.5;
+}
+.custom-alert_description--blue7 {
+  color: hsl(235, 18%, 26%);
 }
 .custom-alert_btn {
   font-family: "Roboto", sans-serif;
@@ -205,9 +223,9 @@
   box-shadow: none;
   margin-block-start: auto;
 }
-.custom-alert_btn--blue7 {
+.custom-alert_btn--blue8 {
   color: hsl(0, 0%, 100%);
-  background-color: hsl(235, 18%, 26%);
+  background-color: hsl(234, 29%, 20%);
 }
 .custom-alert_btn--active:hover {
   cursor: pointer;

@@ -47,8 +47,8 @@ $Weight700: 700;
   display: grid;
   place-content: center;
   
-  &--blue8 {
-    background-color: $Blue800;
+  &--blue7 {
+    background-color: $Blue700;
   }
 }
 
@@ -84,25 +84,37 @@ $Weight700: 700;
   &_heading {
     @include roboto($Weight700);
     font-size: 2.5rem;
+
+    &--blue8 {
+      color: $Blue800;
+    }
   }
   
   &_description {
     @include roboto($Weight400);
     font-size: $Font-paragraph;
     line-height: 1.5;
+
+    &--Blue7 {
+      color: $Blue700;
+    }
   }
   
   &_list {
     @include roboto($Weight400);
     list-style: none;
-  }
+
+    &--blue7 {
+      color: $Blue700;
+    }
   
-  &_list li {
-    background-image: url(../assets/images/icon-list.svg);
-    background-repeat: no-repeat;
-    padding-block-end: 1rem;
-    padding-inline-start: 2.25rem;
-    line-height: 1.5;
+    li {
+      background-image: url(../assets/images/icon-list.svg);
+      background-repeat: no-repeat;
+      padding-block-end: 1rem;
+      padding-inline-start: 2.25rem;
+      line-height: 1.5;
+    }
   }
   
   &_label-container {
@@ -112,7 +124,11 @@ $Weight700: 700;
     font-size: 0.75rem;
     padding-block-end: 0.6rem;
   }
-  
+
+  &_label--blue8 {
+    color: $Blue800;
+  }
+
   &_email-error {
     color: $Red;
   }
@@ -126,25 +142,25 @@ $Weight700: 700;
     text-indent: 1.5rem;
     box-shadow: none;
     border-radius: 0.6rem;
-    border-color: $Grey;
-  }
-
-  &_input-email:focus {
-    outline: none
-  }
+    border: thin solid $Grey;
+      
+    &--active:focus {
+      outline: none
+    }
   
-  &_input-email--active:hover {
-    cursor: pointer;
-  }
+    &--active:hover {
+      cursor: pointer;
+    }
   
-  &_input-email--red {
-    color: $Red;
-    border-color: $Red;
-    background-color: $Red-Low-Opacity;
-  }
+    &--red {
+      color: $Red;
+      border-color: $Red;
+      background-color: $Red-Low-Opacity;
+    }
   
-  &_input-email--error-animation {
-    animation: horizontal-shaking 0.3s;
+    &--error-animation {
+      animation: horizontal-shaking 0.3s;
+    }
   }
   
   &_btn {
@@ -155,17 +171,17 @@ $Weight700: 700;
     border: none;
     box-shadow: none;
     border-radius: 0.6rem;
-  }
-  
-  &_btn--blue7 {
-    background-color: $Blue700;
-    color: $White;
-  }
-  
-  &_btn--active:hover {
-    cursor: pointer;
-    background-color: $Red;
-    box-shadow: 0 6px 25px 0 $Red;
+
+    &--blue8 {
+      background-color: $Blue800;
+      color: $White;
+    }
+
+    &--active:hover {
+      cursor: pointer;
+      background-color: $Red;
+      box-shadow: 0 6px 25px 0 $Red;
+    }
   }
 }
 
@@ -193,12 +209,20 @@ $Weight700: 700;
     @include roboto($Weight700);
     font-size: 2.5rem;
     line-height: 1;
+
+    &--blue8 {
+      color: $Blue800;
+    }
   }
   
   &_description {
     @include roboto($Weight400);
     font-size: $Font-paragraph;
     line-height: 1.5;
+
+    &--blue7 {
+      color: $Blue700;
+    }
   }
   
   &_btn {
@@ -210,17 +234,17 @@ $Weight700: 700;
     border: none;
     box-shadow: none;
     margin-block-start: auto;
-  }
   
-  &_btn--blue7 {
-    color: $White;
-    background-color: $Blue700;
-  }
-  
-  &_btn--active:hover {
-    cursor: pointer;
-    background-color: $Red;
-    box-shadow: 0 6px 25px 0 $Red;
+    &--blue8 {
+      color: $White;
+      background-color: $Blue800;
+    }
+
+    &--active:hover {
+      cursor: pointer;
+      background-color: $Red;
+      box-shadow: 0 6px 25px 0 $Red;
+    }
   }
 }
 //  Tablet
