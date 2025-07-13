@@ -1,0 +1,273 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+@mixin roboto($weight) {
+  font-family: "Roboto",sans-serif;
+  font-optical-sizing: auto;
+  font-weight: $weight;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+
+@keyframes horizontal-shaking {
+  0% { transform: translateX(0) }
+  25% { transform: translateX(5px) }
+  50% { transform: translateX(-5px) }
+  75% { transform: translateX(5px) }
+  100% { transform: translateX(0) }
+}
+
+//  Colors
+//  #Primary
+$Red: hsl(4, 100%, 67%);
+$Red-Low-Opacity: rgba(255, 98, 87, 0.1);
+
+//  #Neutral
+$Blue800: hsl(234, 29%, 20%);
+$Blue700: hsl(235, 18%, 26%);
+$Grey: hsl(0, 0%,58%);
+$White: hsl(0, 0%, 100%);
+
+//  Typography
+//  #Body Copy
+$Font-paragraph: 16px;
+
+//  #Font-Weights
+$Weight400: 400;
+$Weight700: 700;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.main-container {
+  min-width: 100vw;
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
+  
+  &--blue8 {
+    background-color: $Blue800;
+  }
+}
+
+.sign-up {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 2rem;
+  padding-block-end: 2rem;
+  background-color: $White;
+  
+  &--inactive {
+    display: none;
+  }
+  
+  &_image img {
+    max-width: 100%;
+  }
+  
+  &_form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.5rem;
+    padding-inline: 1.5rem;
+  }
+  
+  &_info-container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+  }
+  
+  &_heading {
+    @include roboto($Weight700);
+    font-size: 2.5rem;
+  }
+  
+  &_description {
+    @include roboto($Weight400);
+    font-size: $Font-paragraph;
+    line-height: 1.5;
+  }
+  
+  &_list {
+    @include roboto($Weight400);
+    list-style: none;
+  }
+  
+  &_list li {
+    background-image: url(../assets/images/icon-list.svg);
+    background-repeat: no-repeat;
+    padding-block-end: 1rem;
+    padding-inline-start: 2.25rem;
+    line-height: 1.5;
+  }
+  
+  &_label-container {
+    @include roboto($Weight700);
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.75rem;
+    padding-block-end: 0.6rem;
+  }
+  
+  &_email-error {
+    color: $Red;
+  }
+  
+  &_input-email {
+    @include roboto($Weight400);
+    position: relative;
+    min-width: 100%;
+    min-height: 3.5rem;
+    font-size: $Font-paragraph;
+    text-indent: 1.5rem;
+    border-radius: 0.6rem;
+    border-color: $Grey;
+  }
+  
+  &_input-email--active:hover {
+    cursor: pointer;
+  }
+  
+  &_input-email--red {
+    color: $Red;
+    border-color: $Red;
+    background-color: $Red-Low-Opacity;
+  }
+  
+  &_input-email--error-animation {
+    animation: horizontal-shaking 0.3s;
+  }
+  
+  &_btn {
+    @include roboto($Weight700);
+    min-width: 100%;
+    min-height: 3.5rem;
+    font-size: $Font-paragraph;
+    border: none;
+    box-shadow: none;
+    border-radius: 0.6rem;
+  }
+  
+  &_btn--blue7 {
+    background-color: $Blue700;
+  }
+  
+  &_btn--active:hover {
+    cursor: pointer;
+    background-color: $Red;
+    box-shadow: 0 6px 25px 0 $Red;
+  }
+}
+
+.custom-alert {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 2rem;
+  padding-block: 2rem;
+  padding-inline: 1.5rem;
+  background-color: $White;
+  
+  &--inactive {
+    display: none;
+  }
+  
+  &_info-container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+  }
+  
+  &_heading {
+    @include roboto($Weight700);
+    font-size: 2.5rem;
+    line-height: 1;
+  }
+  
+  &_description {
+    @include roboto($Weight400);
+    font-size: $Font-paragraph;
+    line-height: 1.5;
+  }
+  
+  &_btn {
+    @include roboto($Weight700);
+    min-width: 100%;
+    min-height: 3.5rem;
+    font-size: $Font-paragraph;
+    border-radius: 0.6rem;
+    border: none;
+    box-shadow: none;
+    margin-block-start: auto;
+  }
+  
+  &_btn--blue7 {
+    color: $White;
+    background-color: $Blue700;
+  }
+  
+  &_btn--active:hover {
+    cursor: pointer;
+    background-color: $Red;
+    box-shadow: 0 6px 25px 0 $Red;
+  }
+}
+//  Tablet
+@media screen and (min-width: 26rem) {
+  
+  .main-container {
+    padding: 1rem;
+  }
+  
+  .sign-up {
+    padding: 1.5rem;
+    border-radius: 2rem;
+    
+    &_form {
+      padding-block-end: 1.5rem;
+    }
+  }
+
+  .custom-alert {
+    min-height: fit-content;
+    max-width: 31.25rem;
+    padding: 4rem;
+    padding-block-start: 3rem;
+    border-radius: 2rem;
+    
+    &_heading {
+      font-size: 3.5rem;
+    }
+  }
+}
+//  Desktop
+@media screen and (min-width: 62rem) {
+  
+  .sign-up {
+    flex-direction: row;
+    padding: 1.5rem;
+    column-gap: 2rem;
+    border-radius: 2rem;
+    
+    &_image img {
+      max-width: fit-content;
+      vertical-align: middle;
+    }
+    
+    &_form {
+      order: -1;
+      max-width: 28.125rem;
+      padding-inline: 2.5rem;
+      justify-content: center;
+    }
+    
+    &_heading {
+      font-size: 3.5rem;
+    }
+  }
+}
