@@ -114,8 +114,12 @@
   min-height: 3.5rem;
   font-size: 16px;
   text-indent: 1.5rem;
+  box-shadow: none;
   border-radius: 0.6rem;
   border-color: hsl(0, 0%, 58%);
+}
+.sign-up_input-email:focus {
+  outline: none;
 }
 .sign-up_input-email--active:hover {
   cursor: pointer;
@@ -143,6 +147,7 @@
 }
 .sign-up_btn--blue7 {
   background-color: hsl(235, 18%, 26%);
+  color: hsl(0, 0%, 100%);
 }
 .sign-up_btn--active:hover {
   cursor: pointer;

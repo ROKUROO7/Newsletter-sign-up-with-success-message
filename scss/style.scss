@@ -124,8 +124,13 @@ $Weight700: 700;
     min-height: 3.5rem;
     font-size: $Font-paragraph;
     text-indent: 1.5rem;
+    box-shadow: none;
     border-radius: 0.6rem;
     border-color: $Grey;
+  }
+
+  &_input-email:focus {
+    outline: none
   }
   
   &_input-email--active:hover {
@@ -154,6 +159,7 @@ $Weight700: 700;
   
   &_btn--blue7 {
     background-color: $Blue700;
+    color: $White;
   }
   
   &_btn--active:hover {
